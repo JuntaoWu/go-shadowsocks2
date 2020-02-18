@@ -1,5 +1,5 @@
 version: "3.7"
 services:
   go-shadowsocks2:
-    build: ./go-shadowsocks2
+    build: "./go-shadowsocks2"
     image: cepheus990910/go-shadowsocks2:${TRAVIS_JOB_NUMBER}
