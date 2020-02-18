@@ -19,5 +19,6 @@ RUN apk upgrade --update \
     && rm -rf /var/cache/apk/*
 
 COPY --from=builder /go/bin/go-shadowsocks2 /usr/bin/go-shadowsocks2
+COPY entrypoint.sh entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
