@@ -2,4 +2,4 @@ version: "3.7"
 services:
   go-shadowsocks2:
     build: ./go-shadowsocks2
-    image: cepheus990910/go-shadowsocks2:${SHADOW_SOCKS_VERSION_TAG}
+    image: cepheus990910/go-shadowsocks2:${TRAVIS_JOB_NUMBER}
