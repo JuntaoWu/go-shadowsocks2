@@ -3,4 +3,4 @@ services:
   go-shadowsocks2:
     build: "./go-shadowsocks2"
     restart: "always"
-    image: cepheus990910/go-shadowsocks2:${TRAVIS_JOB_NUMBER}
+    image: cepheus990910/go-shadowsocks2

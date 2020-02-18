@@ -34,7 +34,7 @@ go get -u -v github.com/shadowsocks/go-shadowsocks2
 Start a server listening on port 8488 using `AEAD_CHACHA20_POLY1305` AEAD cipher with password `your-password`.
 
 ```sh
-docker run --restart=always -dt -p 8488:8488 mritd/shadowsocks2 -s 'ss://AEAD_CHACHA20_POLY1305:your-password@:8488' -verbose
+docker run --restart=always -dt -p 8488:8488 cepheus990910/go-shadowsocks2 -s 'ss://AEAD_CHACHA20_POLY1305:your-password@:8488' -verbose
 ```
 
 ## Advanced Usage
