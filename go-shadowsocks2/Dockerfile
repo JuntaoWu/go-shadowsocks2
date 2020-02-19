@@ -2,8 +2,10 @@ FROM golang:alpine3.11 AS builder
 
 RUN apk upgrade \
     && apk add git \
-    && go get github.com/shadowsocks/go-shadowsocks2 \
-    && go get github.com/shadowsocks/v2ray-plugin
+    && go get github.com/shadowsocks/go-shadowsocks2
+
+RUN git clone https://github.com/shadowsocks/v2ray-plugin.git /tmp/v2ray-plugin
+RUN cd /tmp/v2ray-plugin && GOOS=linux GOARCH=amd64 go build -ldflags="-s -w" -o /go/bin/v2ray-plugin
 
 FROM alpine:3.11 AS dist
 
