@@ -21,4 +21,4 @@ RUN apk upgrade --update \
 COPY --from=builder /go/bin/go-shadowsocks2 /usr/bin/go-shadowsocks2
 COPY ./entrypoint.sh /
 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["sh", "/entrypoint.sh"]
